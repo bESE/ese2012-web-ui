@@ -1,0 +1,10 @@
+1.  First, it initializes and loads the desired data. if it is a GET request, it will then prerender the presentation of
+    the data, save the viewState, render it, and unloads the connection (since GET is only used to view, not to edit)
+    if it is a POST request, it can be updated during the request and interactively changed. When a change is done, it
+    will safe the new data and updates the view. When it is done it behaves like Get (unload data and dispose)
+
+2.  Since you just receive something without changing anything on the server. When you want to change something you
+    should use POST
+
+3.  On the viewlevel of the programm. How the data/the results are represented, should not be mixed with the classes
+    providing this data, as you may want to change to look, without changing the calculation
